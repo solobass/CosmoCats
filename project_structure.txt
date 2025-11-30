@@ -1,0 +1,278 @@
+⭐ COSMO CATS — CURSOR-READY FOLDER STRUCTURE
+
+This structure follows Roblox best practices and includes all systems for a highly monetizable game.
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 ReplicatedStorage/
+  📁 Shared/
+    📁 Events/
+      📄 EventSystem.lua (ModuleScript) - Core event system
+      📄 EconomyEvents.lua (ModuleScript) - Economy-related events
+      📄 ShopEvents.lua (ModuleScript) - Shop purchase events
+      📄 InventoryEvents.lua (ModuleScript) - Inventory management events
+      📄 ProgressionEvents.lua (ModuleScript) - Level/XP progression events
+      📄 PlayerDataEvents.lua (ModuleScript) - Data load/save/update events
+      📄 SpeciesEvents.lua (ModuleScript) - Species selection/change events
+      📄 ClanEvents.lua (ModuleScript) - Clan join/leave/update events
+      📄 CharacterEvents.lua (ModuleScript) - Character creation/update events
+      📄 EmoteEvents.lua (ModuleScript) - Emote play/stop events
+      📄 BedEvents.lua (ModuleScript) - Bed rest/sleep events
+    
+    📁 Config/
+      📄 GameConfig.lua (ModuleScript) - Main game configuration
+      📄 EconomyConfig.lua (ModuleScript) - Economy settings
+      📄 ShopConfig.lua (ModuleScript) - Shop items configuration
+      📄 ProgressionConfig.lua (ModuleScript) - Level/XP configuration
+      📄 SpeciesConfig.lua (ModuleScript) - Species definitions
+      📄 ClanConfig.lua (ModuleScript) - Clan settings
+      📄 CharacterConfig.lua (ModuleScript) - Character creation settings
+      📄 EmoteConfig.lua (ModuleScript) - Emote definitions
+      📄 BedConfig.lua (ModuleScript) - Bed/rest system settings
+    
+    📁 Types/
+      📄 PlayerData.lua (ModuleScript) - Player data type definitions
+      📄 Species.lua (ModuleScript) - Species type definitions
+      📄 Clan.lua (ModuleScript) - Clan type definitions
+      📄 Item.lua (ModuleScript) - Item type definitions
+    
+    📁 Utils/
+      📄 DataValidation.lua (ModuleScript) - Data validation utilities
+      📄 MathUtils.lua (ModuleScript) - Math helper functions
+      📄 StringUtils.lua (ModuleScript) - String helper functions
+      📄 TableUtils.lua (ModuleScript) - Table helper functions
+    
+    📁 Managers/
+      📄 CatAvatarManager.lua (ModuleScript) - Avatar management (existing)
+      📄 SpeciesManager.lua (ModuleScript) - Species selection/management
+      📄 ClanManager.lua (ModuleScript) - Clan management
+    
+  📁 Assets/
+    📁 Models/
+      📁 CosmoKitten/ (Model) - Main cat avatar model
+      📁 Species/ (Folder) - Species-specific models
+      📁 Items/ (Folder) - Item models
+      📁 Beds/ (Folder) - Bed models
+    📁 Animations/
+      📁 Emotes/ (Folder) - Emote animations
+      📁 Idle/ (Folder) - Idle animations
+      📁 Movement/ (Folder) - Movement animations
+    📁 Sounds/
+      📁 Music/ (Folder) - Background music
+      📁 SFX/ (Folder) - Sound effects
+    📁 Textures/ (Folder) - Custom textures
+    📁 UI/ (Folder) - UI assets (icons, images)
+  
+  📁 Remotes/
+    📁 PlayerDataRemotes/ (Folder)
+      📄 UpdatePlayerData (RemoteEvent)
+    📁 ShopRemotes/ (Folder)
+      📄 PurchaseGamePass (RemoteEvent)
+      📄 PurchaseProduct (RemoteEvent)
+    📁 InventoryRemotes/ (Folder)
+      📄 EquipItem (RemoteEvent)
+      📄 UnequipItem (RemoteEvent)
+    📁 SpeciesRemotes/ (Folder)
+      📄 SelectSpecies (RemoteEvent)
+      📄 ChangeSpecies (RemoteEvent)
+    📁 ClanRemotes/ (Folder)
+      📄 JoinClan (RemoteEvent)
+      📄 LeaveClan (RemoteEvent)
+      📄 CreateClan (RemoteEvent)
+    📁 CharacterRemotes/ (Folder)
+      📄 UpdateCharacter (RemoteEvent)
+      📄 SaveCharacter (RemoteEvent)
+    📁 EmoteRemotes/ (Folder)
+      📄 PlayEmote (RemoteEvent)
+      📄 StopEmote (RemoteEvent)
+    📁 BedRemotes/ (Folder)
+      📄 RestInBed (RemoteEvent)
+      📄 LeaveBed (RemoteEvent)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 ServerScriptService/
+  📁 Systems/
+    📄 DataStoreManager.server.lua (ModuleScript) - Data persistence
+    📄 PlayerDataManager.server.lua (ModuleScript) - Player data management
+    📄 EconomyManager.server.lua (ModuleScript) - Currency management
+    📄 ShopManager.server.lua (ModuleScript) - Shop purchases
+    📄 InventoryManager.server.lua (ModuleScript) - Inventory system
+    📄 ProgressionManager.server.lua (ModuleScript) - Level/XP system
+    📄 SpeciesManager.server.lua (ModuleScript) - Species system
+    📄 ClanManager.server.lua (ModuleScript) - Clan system
+    📄 CharacterManager.server.lua (ModuleScript) - Character creation
+    📄 EmoteManager.server.lua (ModuleScript) - Emote system
+    📄 BedManager.server.lua (ModuleScript) - Bed/rest system
+  
+  📁 Services/
+    📄 GameService.server.lua (Script) - Main game service
+    📄 PlayerService.server.lua (Script) - Player management service
+    📄 SpawnService.server.lua (Script) - Player spawning
+    📄 CollectibleService.server.lua (Script) - CatTreat spawning/collection
+  
+  📄 Main.server.lua (Script) - Main server entry point
+  📄 BaseplateSetup.server.lua (Script) - World setup (existing)
+  📄 AvatarTest.server.lua (Script) - Avatar testing (existing)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 ServerStorage/
+  📁 Templates/
+    📁 CatAvatars/ (Folder) - Avatar templates
+    📁 Species/ (Folder) - Species templates
+    📁 Items/ (Folder) - Item templates
+    📁 Beds/ (Folder) - Bed templates
+  📁 Data/
+    📁 DefaultData/ (Folder) - Default data templates
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 StarterPlayer/
+  📁 StarterPlayerScripts/
+    📁 Systems/
+      📄 UIController.client.lua (LocalScript) - Main UI controller
+      📄 ShopUI.client.lua (LocalScript) - Shop UI handler
+      📄 InventoryUI.client.lua (LocalScript) - Inventory UI handler
+      📄 EconomyUI.client.lua (LocalScript) - Currency display
+      📄 ProgressionUI.client.lua (LocalScript) - Level/XP display
+      📄 SpeciesUI.client.lua (LocalScript) - Species selection UI
+      📄 ClanUI.client.lua (LocalScript) - Clan UI handler
+      📄 CharacterCreatorUI.client.lua (LocalScript) - Character creator UI
+      📄 EmoteUI.client.lua (LocalScript) - Emote UI handler
+      📄 BedUI.client.lua (LocalScript) - Bed interaction UI
+    
+    📁 Controllers/
+      📄 CameraController.client.lua (LocalScript) - Camera management
+      📄 InputController.client.lua (LocalScript) - Input handling
+      📄 MovementController.client.lua (LocalScript) - Movement handling
+      📄 EmoteController.client.lua (LocalScript) - Emote input handling
+    
+    📄 MainClient.client.lua (LocalScript) - Main client entry point (existing)
+    📄 DebugInfo.client.lua (LocalScript) - Debug information (existing)
+    📄 MovementTest.client.lua (LocalScript) - Movement testing (existing)
+    📄 MovementVerification.client.lua (LocalScript) - Movement verification (existing)
+  
+  📁 StarterCharacter/
+    📄 Animate.lua (LocalScript) - Character animation (existing)
+    📄 CosmoKitten.model.lua (LocalScript) - Avatar model (existing)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 StarterGui/
+  📁 UI/
+    📁 MainUI/
+      📄 MainFrame (ScreenGui) - Main UI container
+      📁 HUD/
+        📄 CurrencyDisplay (Frame) - Coins/Gems display
+        📄 LevelDisplay (Frame) - Level/XP display
+        📄 HealthBar (Frame) - Health display
+      📁 Menus/
+        📄 ShopButton (TextButton) - Open shop
+        📄 InventoryButton (TextButton) - Open inventory
+        📄 SettingsButton (TextButton) - Open settings
+        📄 CharacterButton (TextButton) - Open character creator
+    
+    📁 ShopUI/
+      📄 ShopFrame (ScreenGui) - Shop UI container
+      📁 GamePasses/
+        📄 GamePassList (ScrollingFrame) - Game pass list
+        📄 GamePassTemplate (Frame) - Game pass item template
+      📁 Products/
+        📄 ProductList (ScrollingFrame) - Product list
+        📄 ProductTemplate (Frame) - Product item template
+    
+    📁 InventoryUI/
+      📄 InventoryFrame (ScreenGui) - Inventory UI container
+      📁 Items/
+        📄 ItemList (ScrollingFrame) - Item list
+        📄 ItemTemplate (Frame) - Item template
+      📁 Equipped/
+        📄 EquippedSlots (Frame) - Equipped items display
+    
+    📁 SpeciesUI/
+      📄 SpeciesFrame (ScreenGui) - Species selection UI
+      📁 SpeciesList/
+        📄 SpeciesGrid (ScrollingFrame) - Species grid
+        📄 SpeciesTemplate (Frame) - Species card template
+    
+    📁 ClanUI/
+      📄 ClanFrame (ScreenGui) - Clan UI container
+      📁 ClanInfo/
+        📄 ClanDetails (Frame) - Clan information
+        📄 MemberList (ScrollingFrame) - Clan members
+      📁 ClanActions/
+        📄 JoinClanButton (TextButton)
+        📄 CreateClanButton (TextButton)
+        📄 LeaveClanButton (TextButton)
+    
+    📁 CharacterCreatorUI/
+      📄 CreatorFrame (ScreenGui) - Character creator UI
+      📁 Customization/
+        📄 ColorPicker (Frame) - Color selection
+        📄 PartSelector (Frame) - Body part selection
+        📄 AccessorySelector (Frame) - Accessory selection
+      📁 Preview/
+        📄 CharacterPreview (ViewportFrame) - 3D character preview
+    
+    📁 EmoteUI/
+      📄 EmoteFrame (ScreenGui) - Emote selection UI
+      📁 EmoteList/
+        📄 EmoteGrid (ScrollingFrame) - Emote grid
+        📄 EmoteTemplate (Frame) - Emote button template
+    
+    📁 BedUI/
+      📄 BedFrame (ScreenGui) - Bed interaction UI
+      📁 BedActions/
+        📄 RestButton (TextButton) - Rest in bed
+        📄 LeaveButton (TextButton) - Leave bed
+    
+    📁 SettingsUI/
+      📄 SettingsFrame (ScreenGui) - Settings UI
+      📁 Settings/
+        📄 MusicVolume (Frame) - Music volume slider
+        📄 SFXVolume (Frame) - SFX volume slider
+        📄 CameraSensitivity (Frame) - Camera sensitivity slider
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 Workspace/
+  📁 Map/
+    📁 SpawnPoints/ (Folder) - Player spawn locations
+    📁 CatTreat/ (Folder) - CatTreat spawn areas (existing)
+    📁 Beds/ (Folder) - Bed locations
+    📁 ClanAreas/ (Folder) - Clan-specific areas
+    📁 SpeciesAreas/ (Folder) - Species-specific areas
+  📁 Effects/ (Folder) - Visual effects
+  📁 Lighting/ (Folder) - Lighting setup
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 Lighting/
+  📁 Sky/ (Folder) - Sky settings (existing)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 Assets/ (Optional - for external assets)
+  📁 Avatars/ (Folder)
+  📁 Models/ (Folder)
+  📁 Textures/ (Folder)
+
+═══════════════════════════════════════════════════════════════════════════
+
+NOTES:
+- All ModuleScripts should return a table/object
+- All Scripts/LocalScripts should handle initialization
+- RemoteEvents should be in ReplicatedStorage.Remotes
+- UI should be in StarterGui.UI
+- Server systems should be in ServerScriptService.Systems
+- Client controllers should be in StarterPlayer.StarterPlayerScripts
+
+This structure supports:
+✅ Monetization (Shop, Economy, Inventory)
+✅ Progression (Levels, XP, Unlocks)
+✅ Social (Clans, Species)
+✅ Customization (Character Creator, Emotes)
+✅ Gameplay (Beds, Collectibles, Movement)
+
+

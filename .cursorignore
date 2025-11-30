@@ -1,0 +1,33 @@
+# Assets - Cursor should not parse binary/asset files
+assets/**
+
+# Tools - Automation scripts
+tools/**
+
+# Documentation - Large docs that don't need code analysis
+docs/**
+
+# Binary/Asset file types
+*.blend
+*.fbx
+*.png
+*.jpg
+*.jpeg
+*.psd
+*.obj
+*.glb
+*.gltf
+*.tga
+*.dds
+
+# Roblox binary files
+*.rbxl
+*.rbxlx
+*.rblx
+
+# Large model files
+*.blend1
+*.blend2
+
+# AI-generated assets
+AI Docs/**

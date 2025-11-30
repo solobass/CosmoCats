@@ -1,0 +1,93 @@
+{
+  "name": "SpaceCat",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "CosmoKitten": {
+        "$className": "Model"
+      },
+      "StellarWhisker": {
+        "$className": "Model"
+      },
+      "NebulaPaws": {
+        "$className": "Model"
+      },
+      "GalaxyTail": {
+        "$className": "Model"
+      },
+      "CosmicWhisker": {
+        "$className": "Model"
+      },
+      "AstroClaws": {
+        "$className": "Model"
+      },
+      "VoidHunter": {
+        "$className": "Model"
+      },
+      "StarChaser": {
+        "$className": "Model"
+      },
+      "LunarShadow": {
+        "$className": "Model"
+      },
+      "CosmoMaster": {
+        "$className": "Model"
+      },
+      "CelestialGuardian": {
+        "$className": "Model"
+      },
+      "BlackHoleCat": {
+        "$className": "Model"
+      },
+      "Shared": {
+        "$className": "Folder",
+        "GameConfig": {
+          "$path": "src/src/ReplicatedStorage/Shared/GameConfig.lua"
+        },
+        "CatAvatarManager": {
+          "$path": "src/src/ReplicatedStorage/Shared/CatAvatarManager.lua"
+        }
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "BaseplateSetup": {
+        "$path": "src/src/ServerScriptService/BaseplateSetup.server.lua"
+      },
+      "AvatarTest": {
+        "$path": "src/src/ServerScriptService/AvatarTest.server.lua"
+      },
+      "MainScript": {
+        "$path": "src/src/ServerScriptService/MainScript.server.lua"
+      }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "MainClient": {
+          "$path": "src/src/StarterPlayer/StarterPlayerScripts/MainClient.client.lua"
+        },
+        "MovementTest": {
+          "$path": "src/src/StarterPlayer/StarterPlayerScripts/MovementTest.client.lua"
+        },
+        "DebugInfo": {
+          "$path": "src/src/StarterPlayer/StarterPlayerScripts/DebugInfo.client.lua"
+        },
+        "MovementVerification": {
+          "$path": "src/src/StarterPlayer/StarterPlayerScripts/MovementVerification.client.lua"
+        }
+      }
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "Map": {
+        "$className": "Folder",
+        "CatTreat": {
+          "$className": "Folder"
+        }
+      }
+    }
+  }
+}

@@ -1,31 +1,43 @@
-# Roblox Studio files
+# Roblox Studio
 *.rbxl
 *.rbxlx
 *.rbxm
-*.rbxmx
+*.rblx
+*.rbxl.autosaves
+*.tmp
 
-# Rojo build files
-/build/
-/output/
+# Logs
+logs/
+*.log
 
-# OS generated files
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
+
+# Blender backups
+*.blend1
+*.blend2
+
+# Meshy files
+*.glb
+*.obj
+
+# Cursor's working folders
+.cursor
+
+# Node modules (if using any Node.js tools)
+node_modules/
+
+# Python cache (if using Python tools)
+__pycache__/
+*.pyc
+*.pyo
 
 # IDE files
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# Logs
-*.log
 
 # Temporary files
-*.tmp
-*.temp
+*.swp
+*.swo
+*~

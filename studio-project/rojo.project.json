@@ -1,0 +1,41 @@
+{
+	"name": "CosmoCats_NebulaRealms",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$path": "src/src/ReplicatedStorage"
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$path": "src/src/ServerScriptService"
+		},
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"$path": "src/src/ServerStorage"
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"$path": "src/src/StarterPlayer/StarterPlayerScripts"
+			},
+			"StarterCharacterScripts": {
+				"$className": "StarterCharacterScripts",
+				"$path": "src/src/StarterPlayer/StarterCharacterScripts"
+			}
+		},
+		"StarterGui": {
+			"$className": "StarterGui",
+			"$path": "src/src/StarterGui"
+		},
+		"Workspace": {
+			"$className": "Workspace",
+			"$path": "src/src/Workspace"
+		},
+		"Lighting": {
+			"$className": "Lighting",
+			"$path": "src/src/Lighting"
+		}
+	}
+}
