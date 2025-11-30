@@ -8,10 +8,16 @@ local Modules = ReplicatedStorage:WaitForChild("Modules")
 local SpeciesController = require(Modules.Species.SpeciesController)
 local GameConfig = require(Modules.Config.GameConfig)
 
--- Get PlayerDataManager for loading species data
+-- Get PlayerDataManager for loading species data (safely require)
 local ServerScriptService = game:GetService("ServerScriptService")
 local Systems = ServerScriptService:FindFirstChild("Systems")
-local PlayerDataManager = Systems and require(Systems.PlayerDataManager) or nil
+local PlayerDataManager = nil
+if Systems then
+	local success, result = pcall(function() return require(Systems.PlayerDataManager) end)
+	if success then
+		PlayerDataManager = result
+	end
+end
 
 -- Get or create RemoteEvents
 local function getRemotes()

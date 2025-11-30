@@ -7,11 +7,21 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Modules = ReplicatedStorage:WaitForChild("Modules")
 local GameConfig = require(Modules.Config.GameConfig)
 
--- Integrate with existing systems
+-- Integrate with existing systems (safely require)
 local ServerScriptService = game:GetService("ServerScriptService")
 local Systems = ServerScriptService:FindFirstChild("Systems")
-local EconomyManager = Systems and require(Systems.EconomyManager) or nil
-local PlayerDataManager = Systems and require(Systems.PlayerDataManager) or nil
+local EconomyManager = nil
+local PlayerDataManager = nil
+if Systems then
+	local success1, result1 = pcall(function() return require(Systems.EconomyManager) end)
+	if success1 then
+		EconomyManager = result1
+	end
+	local success2, result2 = pcall(function() return require(Systems.PlayerDataManager) end)
+	if success2 then
+		PlayerDataManager = result2
+	end
+end
 
 local CurrencyServer = {}
 
